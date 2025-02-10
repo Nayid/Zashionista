@@ -39,6 +39,12 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    border: 2px solid blue;
+    padding: 5px;
+    transition: border 0.3s ease-in-out;
+}
+
 section {
     padding: 20px;
     margin: 20px;
