@@ -1,88 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayid's Portfolio</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>My Awesome Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
-        <h1>Nayid's Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="#about" onclick="showSection('about')">About</a></li>
-                <li><a href="#work-history" onclick="showSection('work-history')">Work History</a></li>
-                <li><a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a></li>
-                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <section id="home" class="section">
+        <h1>Welcome to My Website!</h1>
+        <p>This is a simple, clean website created with HTML, CSS, and JavaScript. Enjoy your stay!</p>
+        <button id="clickButton">Click Me!</button>
+    </section>
+
     <section id="about" class="section">
-        <h2>Welcome!</h2>
-        <p>Welcome to my website! I am a passionate developer with experience in various technologies. Welcome to my Web developer Journy! </p>
-    </section>
-
-    <section id="work-history" class="section">
-        <h2>Work History</h2>
-        <div class="work-entry">
-            <h3>Job Title at Company</h3>
-            <p>Duration: January 2023 - Present</p>
-            <p>Description of the job role and responsibilities...</p>
-        </div>
-        <div class="work-entry">
-            <h3>Previous Job Title at Previous Company</h3>
-            <p>Duration: June 2018 - December 2019</p>
-            <p>Description of the job role and responsibilities...</p>
-        </div>
-    </section>
-
-    <section id="portfolio" class="section">
-        <h2>Portfolio</h2>
-        <div class="portfolio-item">
-            <h3>Project Title</h3>
-            <img src="project1.jpg" alt="Project 1">
-            <p>Description of the project...</p>
-        </div>
-        <div class="portfolio-item">
-            <h3>Another Project Title</h3>
-            <img src="project2.jpg" alt="Project 2">
-            <p>Description of the project...</p>
-        </div>
+        <h2>About Me</h2>
+        <p>I'm a web developer learning HTML, CSS, and JavaScript to create cool websites like this one!</p>
     </section>
 
     <section id="contact" class="section">
         <h2>Contact</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
+        <p>If you'd like to get in touch, feel free to reach out!</p>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required><br>
+            <input type="email" id="email" placeholder="Your Email" required><br>
+            <textarea id="message" placeholder="Your Message" required></textarea><br>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2025 Nayid. All rights reserved.</p>
+        <p>&copy; 2025 My Awesome Website</p>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            showSection('about');
-        });
-    </script>
 </body>
-
 </html>
